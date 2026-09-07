@@ -133,18 +133,16 @@
 
     .hero {
       background:
-        radial-gradient(circle at 50% 50%, transparent 0 100px, rgba(255,255,255,.07) 101px 102px, transparent 103px),
-        radial-gradient(circle at 50% 50%, transparent 0 210px, rgba(255,255,255,.06) 211px 212px, transparent 213px),
         linear-gradient(rgba(20,20,22,.55), rgba(20,20,22,.55)),
         url('img/hero_img.png');
       background-size: cover;
-      background-position: center;
+      background-position: center bottom;
       background-repeat: no-repeat;
-      aspect-ratio: 1659 / 948;
+      aspect-ratio: 2.2 / 1;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       color: #ffffff;
-      padding: 0;
+      padding: 0 0 72px;
     }
 
     .hero-grid {
@@ -612,6 +610,7 @@
 
       .hero {
         aspect-ratio: auto;
+        align-items: center;
         padding: 56px 0;
       }
 
