@@ -351,12 +351,14 @@
     /* ---------------- FEATURES ---------------- */
 
     .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 14px;
     }
 
     .feature-card {
+      flex: 0 1 calc((100% - 28px) / 3);
       padding: 24px 20px;
       border: 1px solid #e3e7f0;
       border-radius: 18px;
@@ -577,8 +579,8 @@
         display: none;
       }
 
-      .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .feature-card {
+        flex-basis: calc((100% - 14px) / 2);
       }
 
       .job-grid,
@@ -625,12 +627,15 @@
       }
 
       .job-grid,
-      .feature-grid,
       .path-grid,
       .promise-grid,
       .step-grid,
       .footer-grid {
         grid-template-columns: 1fr;
+      }
+
+      .feature-card {
+        flex-basis: 100%;
       }
 
       .hero-actions,
