@@ -121,15 +121,16 @@
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 64px;
+      text-align: center;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       min-height: 32px;
       padding: 0 12px;
       border-radius: 999px;
@@ -153,12 +154,13 @@
     .hero-desc {
       font-size: 21px;
       color: rgba(255,255,255,.84);
-      margin-bottom: 30px;
+      margin: 0 auto 30px;
       max-width: 620px;
     }
 
     .hero-actions {
       display: flex;
+      justify-content: center;
       gap: 12px;
       flex-wrap: wrap;
     }
@@ -172,65 +174,6 @@
       color: #ffffff;
       border-color: rgba(255,255,255,.45);
       background: rgba(255,255,255,.08);
-    }
-
-    .hero-search {
-      background: #ffffff;
-      color: #172033;
-      padding: 28px;
-      border-radius: 24px;
-      box-shadow: 0 24px 60px rgba(16, 23, 78, .28);
-    }
-
-    .hero-search h2 {
-      font-size: 25px;
-      margin-bottom: 18px;
-    }
-
-    .search-field {
-      margin-bottom: 12px;
-    }
-
-    .search-field label {
-      display: block;
-      font-size: 16px;
-      color: #687084;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-
-    .search-field select,
-    .search-field input {
-      width: 100%;
-      height: 52px;
-      border-radius: 10px;
-      border: 1px solid #dce1ec;
-      padding: 0 14px;
-      font-size: 17px;
-      background: #ffffff;
-    }
-
-    .search-submit {
-      width: 100%;
-      height: 54px;
-      border: none;
-      margin-top: 8px;
-      border-radius: 12px;
-      background: #2f3fa3;
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: 800;
-    }
-
-    .search-count {
-      text-align: center;
-      margin-top: 14px;
-      font-size: 16px;
-      color: #687084;
-    }
-
-    .search-count strong {
-      color: #2f3fa3;
     }
 
     /* ---------------- COMMON ---------------- */
@@ -588,10 +531,6 @@
         display: none;
       }
 
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
       .feature-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -708,48 +647,6 @@
           <button class="btn btn-primary">무료로 시작하기</button>
           <button class="btn btn-secondary">채용공고 둘러보기</button>
         </div>
-      </div>
-
-      <!-- JOB SEARCH -->
-      <div class="hero-search">
-        <h2>어떤 일자리를 찾으세요?</h2>
-
-        <div class="search-field">
-          <label>근무하고 싶은 지역</label>
-          <select>
-            <option>전국</option>
-            <option>서울</option>
-            <option>경기</option>
-            <option>인천</option>
-          </select>
-        </div>
-
-        <div class="search-field">
-          <label>하고 싶은 일</label>
-          <select>
-            <option>모든 직종</option>
-            <option>사무·행정</option>
-            <option>시설관리</option>
-            <option>돌봄·요양</option>
-            <option>서비스</option>
-          </select>
-        </div>
-
-        <div class="search-field">
-          <label>근무 형태</label>
-          <select>
-            <option>상관없어요</option>
-            <option>정규직</option>
-            <option>계약직</option>
-            <option>시간제</option>
-          </select>
-        </div>
-
-        <button class="search-submit">일자리 찾아보기</button>
-
-        <p class="search-count">
-          지금 지원할 수 있는 일자리 <strong>121곳</strong>
-        </p>
       </div>
 
     </div>
