@@ -366,14 +366,15 @@
       aspect-ratio: 4 / 3;
       border-radius: 18px;
       background: #eef1ff;
-      display: grid;
-      place-items: center;
+      overflow: hidden;
       margin-bottom: 20px;
     }
 
-    .offline-media-icon {
-      font-size: 44px;
-      color: #4053be;
+    .offline-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .offline-title {
@@ -914,13 +915,12 @@
         <a href="#" class="text-link">취업활동 전체 보기 →</a>
       </div>
 
-      <!-- TODO: swap these placeholder media panels for real 교육/자격증/채용박람회 photography once available -->
       <!-- TODO: connect each link to the actual 교육/자격증/채용박람회 landing routes once they exist -->
       <div class="offline-grid">
 
         <article class="offline-item reveal">
           <div class="offline-media">
-            <span class="offline-media-icon">☰</span>
+            <img src="img/edu.png" alt="교육에 참여하는 시니어 수강생들" loading="lazy" />
           </div>
           <h3 class="offline-title">교육</h3>
           <p class="offline-desc">
@@ -932,7 +932,7 @@
 
         <article class="offline-item reveal">
           <div class="offline-media">
-            <span class="offline-media-icon">✓</span>
+            <img src="img/certificate.png" alt="자격증을 취득하고 기뻐하는 시니어" loading="lazy" />
           </div>
           <h3 class="offline-title">자격증</h3>
           <p class="offline-desc">
@@ -944,7 +944,7 @@
 
         <article class="offline-item reveal">
           <div class="offline-media">
-            <span class="offline-media-icon">⚑</span>
+            <img src="img/expo.png" alt="채용박람회에서 기업 담당자와 상담하는 모습" loading="lazy" />
           </div>
           <h3 class="offline-title">채용박람회</h3>
           <p class="offline-desc">
